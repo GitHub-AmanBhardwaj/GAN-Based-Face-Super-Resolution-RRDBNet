@@ -71,13 +71,13 @@ Training was performed in **two stages**:
 ### Training Dataset
 **FFHQ (Flickr-Faces-HQ)**  
 High-quality human face images used for training the model.
-**Link:** ![click here](https://www.kaggle.com/datasets/rahulbhalley/ffhq-1024x1024)
+**Link:** [click here](https://www.kaggle.com/datasets/rahulbhalley/ffhq-1024x1024)
 
 
 ### Evaluation Dataset
 **CelebA (CelebFaces Attributes Dataset)**  
 Used to test generalization performance on unseen face images.
-**Link:** ![click here](https://www.kaggle.com/datasets/thang1703/celebahq-1024x1024)
+**Link:** [click here](https://www.kaggle.com/datasets/thang1703/celebahq-1024x1024)
 
 ---
 
