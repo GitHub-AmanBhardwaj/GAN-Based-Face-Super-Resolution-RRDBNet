@@ -71,10 +71,13 @@ Training was performed in **two stages**:
 ### Training Dataset
 **FFHQ (Flickr-Faces-HQ)**  
 High-quality human face images used for training the model.
+**Link:** ![click here](https://www.kaggle.com/datasets/rahulbhalley/ffhq-1024x1024)
+
 
 ### Evaluation Dataset
 **CelebA (CelebFaces Attributes Dataset)**  
 Used to test generalization performance on unseen face images.
+**Link:** ![click here](https://www.kaggle.com/datasets/thang1703/celebahq-1024x1024)
 
 ---
 
@@ -121,3 +124,7 @@ Low Resolution | Generated Super Resolution | Ground Truth
 ### Epoch 20 Results
 
 ![Epoch20 Sample](train-session-2/eval_epoch_20.png)
+
+## Testing Results
+
+Testing results are available at: [Here](https://www.kaggle.com/datasets/fe59c3c43628b3f2ad5126907ee214577cc8397625801cd86328133b8d1a6a00/)
