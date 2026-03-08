@@ -1,2 +1,116 @@
-# GAN-Based-Face-Super-Resolution-RRDBNet
-Implementation of 4× facial image super-resolution using the RRDBNet architecture with perceptual and adversarial training (ESRGAN-style). Trained on FFHQ and evaluated on CelebA dataset.
+# 4x Face Super-Resolution using RRDBNet
+
+PyTorch implementation of **4× facial image super-resolution** using the **RRDBNet architecture** with perceptual and adversarial training inspired by ESRGAN.
+
+The model is trained on **FFHQ high-resolution face images** and evaluated on **CelebA** to reconstruct high-resolution facial images from low-resolution inputs.
+
+---
+
+## Project Overview
+
+Super-resolution aims to reconstruct a **high-resolution (HR) image from a low-resolution (LR) input**.
+
+This project implements a **GAN-based super-resolution pipeline** consisting of:
+
+- **RRDBNet Generator**
+- **CNN Discriminator**
+- **VGG Perceptual Loss**
+- **Adversarial Training**
+
+The model upsamples **64×64 images to 256×256 (4× scale)**.
+
+---
+
+## Architecture
+
+The generator is based on **Residual-in-Residual Dense Blocks (RRDB)**.
+
+### Key Components
+
+Generator
+- RRDBNet architecture
+- Dense residual blocks
+- PixelShuffle upsampling
+
+Discriminator
+- CNN-based discriminator
+- Patch-based prediction
+
+Loss Functions
+- L1 Pixel Loss
+- VGG19 Perceptual Loss
+- Adversarial BCE Loss
+
+---
+
+## Training Pipeline
+
+Training was performed in **two stages**:
+
+### Run 1
+- Epochs: **1 → 10**
+- Includes **warmup training** for generator stability
+- Generator trained initially using **pixel loss**
+
+### Run 2
+- Epochs: **11 → 20**
+- Training resumed using saved weights
+- Full **GAN training enabled**
+
+---
+
+## Datasets
+
+### Training Dataset
+**FFHQ (Flickr-Faces-HQ)**  
+High-quality human face images used for training the model.
+
+### Evaluation Dataset
+**CelebA (CelebFaces Attributes Dataset)**  
+Used to test generalization performance on unseen face images.
+
+---
+
+## Training Results
+
+### Run 1 Training Graphs (Epoch 1–10)
+
+Generator and Discriminator loss curves with PSNR.
+
+![Run1 Training Graph](images/run1_training_graph.png)
+
+---
+
+### Run 2 Training Graphs (Epoch 11–20)
+
+Training resumed from saved checkpoint.
+
+![Run2 Training Graph](images/run2_training_graph.png)
+
+---
+
+## Sample Super-Resolution Outputs
+
+Example results showing:
+
+```
+
+Low Resolution | Generated Super Resolution | Ground Truth
+
+```
+
+### Epoch 5 Results
+
+![Epoch5 Sample](train-session-1/eval_epoch_5.png)
+
+### Epoch 10 Results
+
+![Epoch10 Sample](train-session-1/eval_epoch_10.png)
+
+### Epoch 15 Results
+
+![Epoch15 Sample](train-session-2/eval_epoch_15.png)
+
+### Epoch 20 Results
+
+![Epoch20 Sample](train-session-2/eval_epoch_20.png)
