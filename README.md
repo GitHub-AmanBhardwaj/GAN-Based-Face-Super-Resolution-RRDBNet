@@ -1,5 +1,12 @@
 # 4x Face Super-Resolution using RRDBNet
 
+![Python](https://img.shields.io/badge/Python-3.9+-blue)
+![PyTorch](https://img.shields.io/badge/PyTorch-Deep%20Learning-red)
+![CUDA](https://img.shields.io/badge/CUDA-GPU%20Accelerated-green)
+![GAN](https://img.shields.io/badge/Model-GAN-orange)
+![RRDBNet](https://img.shields.io/badge/Architecture-RRDBNet-purple)
+![License](https://img.shields.io/badge/License-MIT-yellow)
+
 PyTorch implementation of **4× facial image super-resolution** using the **RRDBNet architecture** with perceptual and adversarial training inspired by ESRGAN.
 
 The model is trained on **FFHQ high-resolution face images** and evaluated on **CelebA** to reconstruct high-resolution facial images from low-resolution inputs.
@@ -77,7 +84,7 @@ Used to test generalization performance on unseen face images.
 
 Generator and Discriminator loss curves with PSNR.
 
-![Run1 Training Graph](images/run1_training_graph.png)
+![Run1 Training Graph](train-session-1/training_graphs.png)
 
 ---
 
@@ -85,7 +92,7 @@ Generator and Discriminator loss curves with PSNR.
 
 Training resumed from saved checkpoint.
 
-![Run2 Training Graph](images/run2_training_graph.png)
+![Run2 Training Graph](train-session-2/training_graphs.png)
 
 ---
 
